@@ -1,0 +1,240 @@
+#+SETUPFILE: org-templates/level-0.org
+#+TITLE: Know Your Fish Website Specification
+#+AUTHOR: Anon Ray
+#+EMAIL: rayanon004@gmail.com
+#+DATE: <2015-08-31 Mon>
+#+LANGUAGE:  en
+
+
+* High-level features
+  The high-level features in the website are:
+
+  1. Current month's fish recommendation.
+  2. Widget to choose a month and species to see more details.
+  3. Page which list fish list of a month.
+  4. Page which list details of a species (favourable and un-favourable months, link to explanation).
+  5. Widget to customize your calender and download it in a PDF format.
+  6. KYF team will send newsletters, and SMS alerts.
+     + Subscribe button, with text box for email and phone number.
+  7. Blog for KYF team
+  8. Feeback/Review mechanism.
+  9. Forum for users.
+     
+
+* Modules for the website
+** Backend module of the main website
+*** Submodules:
+    1. Setup Elasticsearch instance for searching in fish data content
+    2. Flask endpoints to serve specific data
+** Frontend module of the main website
+*** Submodules:
+    1. Current month's fish recommendation widget
+    2. Choose and show recommendation based on month/species widget
+    3. Customize your calender widget
+    4. Subscribe widget
+    5. Page to list a particular month's reccomendation (functionally same as 1).
+    6. Page to list a particular species favourable/unfavourable time.
+    7. Static page - about the initiative
+    8. Static page - explanation of the recommendation system.
+** Admin dashboard module
+*** Submodules:
+    1. Uploader to upload new fish data.
+    2. Feedback portal to view feedbacks.
+    3. User engagement portal to manage newsletter, SMS sending etc.
+** Blog
+** Forum
+
+
+* Further additional tasks for complete delivery of the website
+** Integrate Google Analytics
+** SSL certificates for HTTPS
+** Deploying and Hosting the website
+** Maintenance of the website for 3 months
+
+
+* Implications on the client (Additional decisions/charges)
+
+** Register domain name
+Provider: https://gandi.net
+
+Choose among: 
+1. knowyourfish.in
+2. knowyourfish.in.net
+3. knowyourfish.net (this is already taken, but might worth the hassle of re-bidding it because of the pun?)
+4. kyf.in
+
+Any other ideas?
+
+Approx Rs.3500/- (~50$) for 2/3 years.
+
+** Choose a hosting space
+Provider: https://www.e2enetworks.com
+
+Choosing an Indian provider because, all of the users will be from India and will have better response times.
+https://www.e2enetworks.com/products/ssd-cloud-vps-servers/
+
+
+Approx Rs.800/- per month.
+
+** Buy a SSL certificate
+Provider: http://startssl.com, https://digicert.com, https://www.namecheap.com/security/ssl-certificates/domain-validation.aspx
+
+Approx: free to Rs.1500/- per year.
+
+** Bulk SMS provider charges
+
+Provider: https://www.plivo.com/pricing/IN/#!sms, https://twilio.com
+   
+Cheapest: plivo: Rs. 0.17 per SMS
+
+
+* Roadmap overview and cost estimation
+
+|---------------------------------+----------------+---------------|
+| Module/Task                     | Estimated Time | Cost (in Rs.) |
+|                                 |      (in hrs.) |               |
+|---------------------------------+----------------+---------------|
+| Main website backend            |             50 |         25000 |
+| Main website frontend           |             80 |         40000 |
+| Admin dashboard                 |            100 |         50000 |
+| Blog                            |             12 |          6000 |
+| Forum                           |             16 |          8000 |
+| Adding SSL certificate          |              5 |          2500 |
+| Deploying and hosting           |              6 |          3000 |
+| Integrating google analytics    |              8 |          4000 |
+| Maintenance for 3 months (free) |              0 |             0 |
+|---------------------------------+----------------+---------------|
+| Total                           |            277 |        138500 |
+|---------------------------------+----------------+---------------|
+#+TBLFM: $3=($2*500)
+#+TBLFM: @12$2=vsum(@3$2..@11$2)
+#+TBLFM: @12$3=vsum(@3$3..@11$3)
+
+
+
+* Comprehensive breakdown of modules into tasks
+
+1. Main website module: backend [~50 hrs]
+   1. Setup elasticsearch instance. [~8 hrs]
+   2. index page [~8 hrs]
+      1. setup all data points
+	 1. List of all species
+	 2. List of all months
+	 3. Species list of current month
+      2. Render index.html
+   3. Backend API =/months/<month-name>=. e.g: =/months/august= [~8 hrs]
+      1. Query Elasticsearch API
+      2. If request is via AJAX then render only JSON data, else render a full HTML: =months.html=
+      3. This data is cached.
+   4. Backend API =/species/<species1>,<species2>=. [~8 hrs]
+      e.g: =/species/kingfish=, =/species/kingish,pomfret=
+      1. Query Elasticsearch API
+      2. If request is via AJAX then render only JSON data, else render a full HTML: =species.html=
+      3. This data is cached.
+
+2. Main website module: frontend [~60 hrs]
+   1. Current month's fish recommendation. [8 hrs]
+      1. Frontend view to render month-wise species list. makes call to =/month/<month-name>=
+   2. Widget to choose a month and species to see more details. [8 hrs]
+      1. Frontend view to render a form to choose a month. -> dropdown?
+      2. Frontend view to choose species. -> dropdown/typahead/thumbnails?
+      3. Clicking on anything, triggers call to appropriate page.
+   3. Page which list species list of a month. [8 hrs]
+      1. Frontend view to render month-wise species list. makes call to =/month/<month-name>=
+      2. Link to rationale/explanation of recommendation system. <<7>>
+   4. Page which list details of a species. [8 hrs]
+      1. Frontend view to render species detail. makes call to =/species/sp-name=
+      2. Link to rationale/explanation of recommendation system. <<7>>
+   5. Widget to customize your calender and download it in a PDF format. [12 hrs]
+      1. Frontend JS view to render a modal, a list of species in thumbnails, allow user to select multiple, and a download button
+      2. Frontend code (probably part of same view) to make a backend call to get all details of chosen species.
+         Render HTML from the fetched data, and generate a PDF out of it. Probably use =pdfjs=.
+      3. Backend API to serve data of multiple species. <<4.1>
+   6. Subscribe widget to enter name, email and phone number. [4 hrs]
+   7. Static page - About the Initiative [4 hrs]
+   8. Static page - Rationale/explanation of the recommendation system. [4 hrs]
+
+3. Admin dashboard module [~100 hrs]
+   1. Submodules:
+      1. Uploader to upload new fish data. [12 hrs]
+      2. Feedback portal to view feedbacks. [12 hrs]
+      3. User engagement portal to manage newsletter, SMS sending etc. [64hrs]
+   2. Database:
+      1. A =subscribers= table with name, phone number and email.
+	All cannot be blank, atleast one field has to be present.
+      2. A =feedbacks= table, to store all feedbacks.
+      3. An =admins= table, to store user details of admin. For login purposes.
+      4. A =newsletters_sent= table to store metadata (subject, admin name, date, no_of_receipents) of sent newsletters.
+      5. A =sms_sent= table to store metadata (subject, admin name, date, no_of_receipents) of sent SMS.
+   3. Backend API to store a feedback, and fetch all feedbacks.
+   4. Frontend view to show all feedbacks.
+   5. Backend API to upload an excel file and convert it to JSON and index it in Elasticsearch instance.
+   6. Frontend view to upload an excel sheet.
+   7. Backend API to store subscriber details.
+      1. =POST /subscribe=: ={'name': 'Joe Smith', 'email: joe@smith.com'', 'phone': '+91-9988776655'}=
+   8. Frontend view to compose email for newsletter.
+   9. Frontend view to compose SMS.
+   10. Frontend view to see all newsletters sent in the past.
+   11. Frontend view to see all SMSs sent in the past.
+   12. Mailing list integration
+       1. Mailchimp?
+   13. SMS provider integration
+       1. The cheapest provider that we could find: 
+
+4. Blog [~12 hrs]
+   1. Decide =kyf.in/blog= or =blog.kyf.in= 
+   2. Setting up wordpress instance. [4 hrs]
+   3. Themeing. [8 hrs]
+
+5. Forum [~16 hrs]
+   1. Decide =kyf.in/forum= or =forum.kyf.in= 
+   2. Setting up vanilla forums instance. [8 hrs]
+   3. Themeing. [8 hrs]
+
+6. Deployment and hosting [4 hrs]
+
+7. Setting up SSL for the entire domain. [4 hrs] 
+
+
+* Various details of tasks
+
+  |----------+-----------+------------|
+  | Task No. | Estimated | Dependency |
+  |          | Time      |            |
+  |----------+-----------+------------|
+  |          |           |            |
+  |----------+-----------+------------|
+
+|---------+---------------------------------------------------------+-----------+------------+---|
+| Task No | Feature                                                 | Estimated | Dependency |   |
+|         |                                                         | Time      |            |   |
+|---------+---------------------------------------------------------+-----------+------------+---|
+|       1 | Homepage containing current month's fish list           | 5 days    |            |   |
+|         | (including preferred, and to                            |           |            |   |
+|         | be avoided).                                            |           |            |   |
+|---------+---------------------------------------------------------+-----------+------------+---|
+|       2 | Homepage also containing a widget to choose a           | 1 day     |            |   |
+|         | month and species.                                      |           |            |   |
+|---------+---------------------------------------------------------+-----------+------------+---|
+|       3 | Another page which list details of a month              |           |            |   |
+|         | (when clicking from homepage).                          |           |            |   |
+|---------+---------------------------------------------------------+-----------+------------+---|
+|       4 | Another page which list details of a species            |           |            |   |
+|         | (when clicking from homepage).                          |           |            |   |
+|---------+---------------------------------------------------------+-----------+------------+---|
+|       5 | Widget to customize your calender and download          |           |            |   |
+|         | it in a PDF format.                                     |           |            |   |
+|         | (this will also be in the home page).                   |           |            |   |
+|---------+---------------------------------------------------------+-----------+------------+---|
+|       6 | Subscribe button, with text box for email and phone     |           |            |   |
+|         | number. KYF team will send newsletters, and SMS alerts. |           |            |   |
+|---------+---------------------------------------------------------+-----------+------------+---|
+|       7 | A blog where content is updated regularly by the        |           |            |   |
+|         | KYF team.                                               |           |            |   |
+|---------+---------------------------------------------------------+-----------+------------+---|
+|       8 | A feedback form for each species, which is internal to  |           |            |   |
+|         | the KYF team.                                           |           |            |   |
+|---------+---------------------------------------------------------+-----------+------------+---|
+|       9 | An open forum for the users of KYF.                     |           |            |   |
+|---------+---------------------------------------------------------+-----------+------------+---|
+
