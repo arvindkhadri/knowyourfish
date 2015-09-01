@@ -94,19 +94,19 @@ Cheapest: plivo: Rs. 0.17 per SMS
 | Module/Task                     | Estimated Time | Cost (in Rs.) |
 |                                 |      (in hrs.) |               |
 |---------------------------------+----------------+---------------|
-| Main website backend            |             50 |         25000 |
-| Main website frontend           |             80 |         40000 |
-| Admin dashboard                 |            100 |         50000 |
-| Blog                            |             12 |          6000 |
-| Forum                           |             16 |          8000 |
-| Adding SSL certificate          |              5 |          2500 |
-| Deploying and hosting           |              6 |          3000 |
-| Integrating google analytics    |              8 |          4000 |
+| Main website backend            |             40 |         24000 |
+| Main website frontend           |             60 |         36000 |
+| Admin dashboard                 |            100 |         60000 |
+| Blog                            |             12 |          7200 |
+| Forum                           |             16 |          9600 |
+| Adding SSL certificate          |              4 |          2400 |
+| Deploying and hosting           |              4 |          2400 |
+| Integrating google analytics    |              4 |          2400 |
 | Maintenance for 3 months (free) |              0 |             0 |
 |---------------------------------+----------------+---------------|
-| Total                           |            277 |        138500 |
+| Total                           |            240 |        144000 |
 |---------------------------------+----------------+---------------|
-#+TBLFM: $3=($2*500)
+#+TBLFM: $3=($2*600)
 #+TBLFM: @12$2=vsum(@3$2..@11$2)
 #+TBLFM: @12$3=vsum(@3$3..@11$3)
 
@@ -114,7 +114,7 @@ Cheapest: plivo: Rs. 0.17 per SMS
 
 * Comprehensive breakdown of modules into tasks
 
-1. Main website module: backend [~50 hrs]
+1. Main website module: backend [~40 hrs]
    1. Setup elasticsearch instance. [~8 hrs]
    2. index page [~8 hrs]
       1. setup all data points
@@ -150,9 +150,9 @@ Cheapest: plivo: Rs. 0.17 per SMS
       2. Frontend code (probably part of same view) to make a backend call to get all details of chosen species.
          Render HTML from the fetched data, and generate a PDF out of it. Probably use =pdfjs=.
       3. Backend API to serve data of multiple species. <<4.1>
-   6. Subscribe widget to enter name, email and phone number. [4 hrs]
-   7. Static page - About the Initiative [4 hrs]
-   8. Static page - Rationale/explanation of the recommendation system. [4 hrs]
+   6. Subscribe widget to enter name, email and phone number. [2 hrs]
+   7. Static page - About the Initiative [2 hrs]
+   8. Static page - Rationale/explanation of the recommendation system. [2 hrs]
 
 3. Admin dashboard module [~100 hrs]
    1. Submodules:
