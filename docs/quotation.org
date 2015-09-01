@@ -1,0 +1,122 @@
+
+#+SETUPFILE: org-templates/level-0.org
+#+TITLE: Know Your Fish Website Specification
+#+AUTHOR: Anon Ray, Arvind Khadri
+#+EMAIL: rayanon004@gmail.com
+#+DATE: <2015-08-31 Mon>
+#+LANGUAGE:  en
+
+
+* High-level features
+  The high-level features in the website are:
+
+  1. Current month's fish recommendation.
+  2. Widget to choose a month and species to see more details.
+  3. Page which list fish list of a month.
+  4. Page which list details of a species (favourable and un-favourable months, link to explanation).
+  5. Widget to customize your calender and download it in a PDF format.
+  6. KYF team will send newsletters, and SMS alerts.
+     + Subscribe button, with text box for email and phone number.
+  7. Blog for KYF team
+  8. Feeback/Review mechanism.
+  9. Forum for users.
+
+
+* Modules for the website
+** Backend module of the main website
+*** Submodules:
+    1. Setup Elasticsearch instance for searching in fish data content
+    2. Flask endpoints to serve specific data
+** Frontend module of the main website
+*** Submodules:
+    1. Current month's fish recommendation widget
+    2. Choose and show recommendation based on month/species widget
+    3. Customize your calender widget
+    4. Subscribe widget
+    5. Page to list a particular month's reccomendation (functionally same as 1).
+    6. Page to list a particular species favourable/unfavourable time.
+    7. Static page - about the initiative
+    8. Static page - explanation of the recommendation system.
+** Admin dashboard module
+*** Submodules:
+    1. Uploader to upload new fish data.
+    2. Feedback portal to view feedbacks.
+    3. User engagement portal to manage newsletter, SMS sending etc.
+** Blog
+** Forum
+
+
+* Additional tasks for complete delivery of the website
+** Making it mobile responsive
+** Integrate Google Analytics
+** SSL certificates for HTTPS
+** Deploying and Hosting the website
+** Maintenance of the website for 3 months
+
+
+* Implications on the client (Additional decisions/charges)
+
+** Register domain name
+Provider: https://gandi.net
+
+Choose among:
+1. knowyourfish.in
+2. knowyourfish.in.net
+3. knowyourfish.net (this is already taken, but might worth the hassle of re-bidding it because of the pun?)
+4. kyf.in
+
+Any other ideas?
+
+Approx Rs.3500/- (~50$) for 2/3 years.
+
+** Choose a hosting space
+Provider: https://www.e2enetworks.com
+
+Choosing an Indian provider because, all of the users will be from India and will have better response times.
+https://www.e2enetworks.com/products/ssd-cloud-vps-servers/
+
+
+Approx Rs.800/- per month.
+
+** Buy a SSL certificate
+Provider: http://startssl.com, https://digicert.com, https://www.namecheap.com/security/ssl-certificates/domain-validation.aspx
+
+Approx: free to Rs.1500/- per year.
+
+** Bulk SMS provider charges
+
+Provider: https://www.plivo.com/pricing/IN/#!sms, https://twilio.com
+
+Cheapest: plivo: Rs. 0.17 per SMS
+
+
+* Roadmap overview
+
+|---------------------------------+----------------|
+| Module/Task                     | Estimated Time |
+|                                 |      (in hrs.) |
+|---------------------------------+----------------|
+| Main website backend            |             50 |
+| Main website frontend           |            100 |
+| Admin dashboard                 |            100 |
+| Blog                            |             12 |
+| Forum                           |             16 |
+| Adding SSL certificate          |              4 |
+| Deploying and hosting           |              4 |
+| Integrating google analytics    |              4 |
+| Maintenance for 3 months (free) |              0 |
+|---------------------------------+----------------|
+| Total                           |            290 |
+|---------------------------------+----------------|
+#+TBLFM: @12$2=vsum(@3$2..@11$2)
+
+NOTE:: The above time is an esitmate. There maybe a +/- 10% variation.
+
+Please note, that the above is an estimation, and should not be taken for granted as 
+the actual value.
+
+* Cost estimation
+
+Our charges are Rs. 750/- per hour.
+We will track our time, hourly, when we are working on your project.
+We will bill you on the actual hours we have worked on your project.
