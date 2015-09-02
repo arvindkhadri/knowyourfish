@@ -35,7 +35,8 @@
     6. Page to list a particular species favourable/unfavourable time.
     7. Static page - about the initiative
     8. Static page - explanation of the recommendation system.
-    9. Making it mobile responsive
+    9. Layout and design of the website.
+    10. Making it mobile responsive
 ** Admin dashboard module
 *** Submodules:
     1. Uploader to upload new fish data.
