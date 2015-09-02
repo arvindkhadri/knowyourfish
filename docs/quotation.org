@@ -112,11 +112,11 @@ Cheapest: plivo: Rs. 0.17 per SMS
 
 NOTE:: The above time is an esitmate. There maybe a +/- 10% variation.
 
-Please note, that the above is an estimation, and should not be taken for granted as 
+Please note, that the above is an estimation, and should not be taken for granted as
 the actual value.
 
 * Cost estimation
 
 Our charges are Rs. 750/- per hour.
 We will track our time, hourly, when we are working on your project.
-We will bill you on the actual hours we have worked on your project.
+The bill will be generated for the time tracked.

@@ -19,7 +19,7 @@
   7. Blog for KYF team
   8. Feeback/Review mechanism.
   9. Forum for users.
-     
+
 
 * Modules for the website
 ** Backend module of the main website
@@ -46,6 +46,7 @@
 
 
 * Further additional tasks for complete delivery of the website
+** Mobile responsive website
 ** Integrate Google Analytics
 ** SSL certificates for HTTPS
 ** Deploying and Hosting the website
@@ -57,7 +58,7 @@
 ** Register domain name
 Provider: https://gandi.net
 
-Choose among: 
+Choose among:
 1. knowyourfish.in
 2. knowyourfish.in.net
 3. knowyourfish.net (this is already taken, but might worth the hassle of re-bidding it because of the pun?)
@@ -84,7 +85,7 @@ Approx: free to Rs.1500/- per year.
 ** Bulk SMS provider charges
 
 Provider: https://www.plivo.com/pricing/IN/#!sms, https://twilio.com
-   
+
 Cheapest: plivo: Rs. 0.17 per SMS
 
 
@@ -94,19 +95,19 @@ Cheapest: plivo: Rs. 0.17 per SMS
 | Module/Task                     | Estimated Time | Cost (in Rs.) |
 |                                 |      (in hrs.) |               |
 |---------------------------------+----------------+---------------|
-| Main website backend            |             40 |         24000 |
-| Main website frontend           |             60 |         36000 |
-| Admin dashboard                 |            100 |         60000 |
-| Blog                            |             12 |          7200 |
-| Forum                           |             16 |          9600 |
-| Adding SSL certificate          |              4 |          2400 |
-| Deploying and hosting           |              4 |          2400 |
-| Integrating google analytics    |              4 |          2400 |
+| Main website backend            |             40 |         30000 |
+| Main website frontend           |             60 |         45000 |
+| Admin dashboard                 |            100 |         75000 |
+| Blog                            |             12 |          9000 |
+| Forum                           |             16 |         12000 |
+| Adding SSL certificate          |              4 |          3000 |
+| Deploying and hosting           |              4 |          3000 |
+| Integrating google analytics    |              4 |          3000 |
 | Maintenance for 3 months (free) |              0 |             0 |
 |---------------------------------+----------------+---------------|
-| Total                           |            240 |        144000 |
+| Total                           |            240 |        180000 |
 |---------------------------------+----------------+---------------|
-#+TBLFM: $3=($2*600)
+#+TBLFM: $3=($2*750)
 #+TBLFM: @12$2=vsum(@3$2..@11$2)
 #+TBLFM: @12$3=vsum(@3$3..@11$3)
 
@@ -179,21 +180,21 @@ Cheapest: plivo: Rs. 0.17 per SMS
    12. Mailing list integration
        1. Mailchimp?
    13. SMS provider integration
-       1. The cheapest provider that we could find: 
+       1. The cheapest provider that we could find:
 
 4. Blog [~12 hrs]
-   1. Decide =kyf.in/blog= or =blog.kyf.in= 
+   1. Decide =kyf.in/blog= or =blog.kyf.in=
    2. Setting up wordpress instance. [4 hrs]
    3. Themeing. [8 hrs]
 
 5. Forum [~16 hrs]
-   1. Decide =kyf.in/forum= or =forum.kyf.in= 
+   1. Decide =kyf.in/forum= or =forum.kyf.in=
    2. Setting up vanilla forums instance. [8 hrs]
    3. Themeing. [8 hrs]
 
 6. Deployment and hosting [4 hrs]
 
-7. Setting up SSL for the entire domain. [4 hrs] 
+7. Setting up SSL for the entire domain. [4 hrs]
 
 
 * Various details of tasks
@@ -237,4 +238,3 @@ Cheapest: plivo: Rs. 0.17 per SMS
 |---------+---------------------------------------------------------+-----------+------------+---|
 |       9 | An open forum for the users of KYF.                     |           |            |   |
 |---------+---------------------------------------------------------+-----------+------------+---|
-
