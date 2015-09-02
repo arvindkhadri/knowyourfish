@@ -104,7 +104,7 @@ Cheapest: plivo: Rs. 0.17 per SMS
 | Adding SSL certificate          |              4 |
 | Deploying and hosting           |              4 |
 | Integrating google analytics    |              4 |
-| Maintenance for 3 months (free) |              0 |
+| Maintenance for 3 months (free) |              - |
 |---------------------------------+----------------|
 | Total                           |            290 |
 |---------------------------------+----------------|
