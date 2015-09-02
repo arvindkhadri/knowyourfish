@@ -1,10 +1,8 @@
-
-#+SETUPFILE: org-templates/level-0.org
 #+TITLE: Know Your Fish Website Specification
 #+AUTHOR: Anon Ray, Arvind Khadri
 #+EMAIL: rayanon004@gmail.com
-#+DATE: <2015-08-31 Mon>
-#+LANGUAGE:  en
+#+DATE: <2015-09-01 Tue>
+#+LANGUAGE: en
 
 
 * High-level features
@@ -37,6 +35,7 @@
     6. Page to list a particular species favourable/unfavourable time.
     7. Static page - about the initiative
     8. Static page - explanation of the recommendation system.
+    9. Making it mobile responsive
 ** Admin dashboard module
 *** Submodules:
     1. Uploader to upload new fish data.
@@ -47,7 +46,6 @@
 
 
 * Additional tasks for complete delivery of the website
-** Making it mobile responsive
 ** Integrate Google Analytics
 ** SSL certificates for HTTPS
 ** Deploying and Hosting the website
@@ -81,13 +79,14 @@ Approx Rs.800/- per month.
 ** Buy a SSL certificate
 Provider: http://startssl.com, https://digicert.com, https://www.namecheap.com/security/ssl-certificates/domain-validation.aspx
 
-Approx: free to Rs.1500/- per year.
+Approx: free to Rs.5000/- per year.
 
 ** Bulk SMS provider charges
 
 Provider: https://www.plivo.com/pricing/IN/#!sms, https://twilio.com
 
 Cheapest: plivo: Rs. 0.17 per SMS
+
 
 
 * Roadmap overview
@@ -110,13 +109,20 @@ Cheapest: plivo: Rs. 0.17 per SMS
 |---------------------------------+----------------|
 #+TBLFM: @12$2=vsum(@3$2..@11$2)
 
-NOTE:: The above time is an esitmate. There maybe a +/- 10% variation.
+*NOTE*: The above time is an esitmate. There maybe a +/- 10% variation.
 
-Please note, that the above is an estimation, and should not be taken for granted as 
+*Please note*, that the above is an estimation, and should not be taken for granted as 
 the actual value.
+
 
 * Cost estimation
 
 Our charges are Rs. 750/- per hour.
-We will track our time, hourly, when we are working on your project.
-We will bill you on the actual hours we have worked on your project.
+
+We will track our time, hourly, when we are actually working on your project.
+
+We will bill you on the actual hours we have worked on your project, and not on the estimation.
+
+
+
+-------------------
