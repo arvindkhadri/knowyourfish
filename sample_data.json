@@ -1,29 +1,35 @@
 {
-  'name': 'Silver Pomphret',
-  'scientific_name': 'P.argentus',
-  'gross_score': -2
-  'trophic_level': {
-    'value': 3.3,
-    'score': 0
+  "name": "Silver Pomphret",
+  "scientific_name": "P.argentus",
+  "gross_score": -2,
+  "trophic_level": {
+    "value": 3.3,
+    "score": 0
   },
-  'resilience': {
-    'value': 'medium',
-    'score': 0
+  "resilience": {
+    "value": "medium",
+    "score": 0
   },
-  'bycatch': {
-    'value': 'high',
-    'method': 'trawl',
-    'score': -1
+  "bycatch": {
+    "value": "high",
+    "method": "trawl",
+    "score": -1
   },
-  'current_trend': {
-    'value': 'N/A',
-    'score': 0
+  "current_trend": {
+    "value": "N\/A",
+    "score": 0
   },
-  'availability': {
-    'value': 'import',
-    'score': -1
+  "availability": {
+    "value": "import",
+    "score": -1
   },
-  'avoid_season': ['3', '5'] // Range of months in which the fish must be avoided.
-  'criterion_for_seasonality': 'juvenile catch',
-  'safe_period': ['6', '2']
+  "avoid_season": [
+    "3",
+    "5"
+  ],
+  "criterion_for_seasonality": "juvenile catch",
+  "safe_period": [
+    "6",
+    "2"
+  ]
 }
