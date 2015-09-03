@@ -1,0 +1,145 @@
+#+TITLE: Scrum board for KYF
+#+AUTHOR: Arvind
+#+EMAIL: arvind@riseup.net
+#+TODO: TODO STARTED | DONE DEFERRED
+#+COLUMNS: %35ITEM %TASKID %OWNER %3PRIORITY %TODO %5ESTIMATED{+} %3ACTUAL{+}
+
+* REPORTS
+** SCRUM BOARD
+#+BEGIN: block-update-board
+| TODO                                       | STARTED | DONE | DEFERRED |
+|--------------------------------------------+---------+------+----------|
+| S1.01. [#A] Setup ElasticSearch            |         |      |          |
+| S1.02. [#A] Create API to query by month   |         |      |          |
+| S1.03. [#A] Create API to query by species |         |      |          |
+#+END:
+** DEVELOPER SUMMARY
+#+BEGIN: block-update-summary
+| NAME       | ESTIMATED | ACTUAL | DONE | REMAINING | PENCILS DOWN | PROGRESS   |
+|------------+-----------+--------+------+-----------+--------------+------------|
+| Zoso       |        24 |      0 |    0 |        24 |   2015-09-11 | ---------- |
+| Ecthiender |         0 |      0 |    0 |         0 |   2015-09-03 | ---------- |
+#+END:
+** BURNDOWN CHART
+#+BEGIN: block-update-graph
+:
+:                                    Burndown
+:
+:  25 ++------+-------+------+-------+-------+-------+------+-------+------++
+:     | ++-                                                                 |
+:     |    ++-                                               ACTUAL +-----+ |
+:     |       ++-                                             IDEAL +-----+ |
+:  20 ++         ++-+-+                                                    ++
+:     |                +-+                                                  |
+:     |                   +-++-                                             |
+:  15 ++                       ++-                                         ++
+:     |                           +-+                                       |
+:     |                              +-++-+                                 |
+:     |                                    +-+                              |
+:  10 ++                                      +-+-                         ++
+:     |                                           ++-+                      |
+:     |                                               +-+                   |
+:   5 ++                                                 +-++-+-           ++
+:     |                                                         ++-         |
+:     |                                                            ++-      |
+:     |                                                               ++-++-|
+:   0 ++------+-------+------+-------+-------+-------+------+-------+------++
+:     0       5       10     15      20      25      30     35      40      45
+:
+:
+#+END:
+** BURNDOWN LIST
+#+PLOT: title:"Burndown" ind:1 deps:(3 4) set:"term dumb" set:"xrange [0:45]" set:"xtics scale 0.5" set:"ytics scale 0.5" file:"burndown.plt"
+#+BEGIN: block-update-burndown
+| DAY |       DATE | ACTUAL | IDEAL | TASKS COMPLETED |
+|-----+------------+--------+-------+-----------------|
+|   1 | 2015-09-03 |     24 |    23 |                 |
+|   2 | 2015-09-04 |        |    23 |                 |
+|   3 | 2015-09-05 |        |    22 |                 |
+|   4 | 2015-09-06 |        |    22 |                 |
+|   5 | 2015-09-07 |        |    21 |                 |
+|   6 | 2015-09-08 |        |    21 |                 |
+|   7 | 2015-09-09 |        |    20 |                 |
+|   8 | 2015-09-10 |        |    20 |                 |
+|   9 | 2015-09-11 |        |    19 |                 |
+|  10 | 2015-09-12 |        |    19 |                 |
+|  11 | 2015-09-13 |        |    18 |                 |
+|  12 | 2015-09-14 |        |    18 |                 |
+|  13 | 2015-09-15 |        |    17 |                 |
+|  14 | 2015-09-16 |        |    17 |                 |
+|  15 | 2015-09-17 |        |    16 |                 |
+|  16 | 2015-09-18 |        |    15 |                 |
+|  17 | 2015-09-19 |        |    15 |                 |
+|  18 | 2015-09-20 |        |    14 |                 |
+|  19 | 2015-09-21 |        |    14 |                 |
+|  20 | 2015-09-22 |        |    13 |                 |
+|  21 | 2015-09-23 |        |    13 |                 |
+|  22 | 2015-09-24 |        |    12 |                 |
+|  23 | 2015-09-25 |        |    12 |                 |
+|  24 | 2015-09-26 |        |    11 |                 |
+|  25 | 2015-09-27 |        |    11 |                 |
+|  26 | 2015-09-28 |        |    10 |                 |
+|  27 | 2015-09-29 |        |    10 |                 |
+|  28 | 2015-09-30 |        |     9 |                 |
+|  29 | 2015-10-01 |        |     9 |                 |
+|  30 | 2015-10-02 |        |     8 |                 |
+|  31 | 2015-10-03 |        |     7 |                 |
+|  32 | 2015-10-04 |        |     7 |                 |
+|  33 | 2015-10-05 |        |     6 |                 |
+|  34 | 2015-10-06 |        |     6 |                 |
+|  35 | 2015-10-07 |        |     5 |                 |
+|  36 | 2015-10-08 |        |     5 |                 |
+|  37 | 2015-10-09 |        |     4 |                 |
+|  38 | 2015-10-10 |        |     4 |                 |
+|  39 | 2015-10-11 |        |     3 |                 |
+|  40 | 2015-10-12 |        |     3 |                 |
+|  41 | 2015-10-13 |        |     2 |                 |
+|  42 | 2015-10-14 |        |     2 |                 |
+|  43 | 2015-10-15 |        |     1 |                 |
+|  44 | 2015-10-16 |        |     1 |                 |
+|  45 | 2015-10-17 |        |     0 |                 |
+#+END:
+** TASK LIST
+#+BEGIN: columnview :hlines 2 :maxlevel 5 :id "TASKS"
+| ITEM                               | TASKID | OWNER | PRIORITY | TODO | ESTIMATED | ACTUAL |
+|------------------------------------+--------+-------+----------+------+-----------+--------|
+| * TASKS                            |        |       |          |      |        24 |      0 |
+|------------------------------------+--------+-------+----------+------+-----------+--------|
+| ** Website's backend module        |        |       |          |      |        24 |      0 |
+| *** Setup ElasticSearch            | S1.01  | zoso  | A        | TODO |         8 |      0 |
+| *** Create API to query by month   | S1.02  | zoso  | A        | TODO |         8 |      0 |
+| *** Create API to query by species | S1.03  | zoso  | A        | TODO |         8 |      0 |
+#+END:
+* TASKS
+  :PROPERTIES:
+  :ID:       TASKS
+  :SPRINTLENGTH: 45
+  :SPRINTSTART: <2015-09-03 Thu>
+  :wpd-ecthiender: 4
+  :wpd-zoso: 4
+  :END:
+** Website's backend module
+*** TODO [#A] Setup ElasticSearch
+    :PROPERTIES:
+    :ESTIMATED: 8
+    :ACTUAL:   0
+    :OWNER:    zoso
+    :TASKID:   S1.01
+    :END:
+    Configure and run elasticsearch with indexed data required for the website.
+*** TODO [#A] Create API to query by month
+    :PROPERTIES:
+    :ESTIMATED: 8
+    :ACTUAL:   0
+    :OWNER:    zoso
+    :TASKID:   S1.02
+    :END:
+*** TODO [#A] Create API to query by species
+    :PROPERTIES:
+    :ESTIMATED: 8
+    :ACTUAL:   0
+    :OWNER:    zoso
+    :TASKID:   S1.03
+    :END:
+
+* BACKLOG
